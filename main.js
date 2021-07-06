@@ -74,19 +74,20 @@ makeInvisible('#heading');
 
 // adds a new li with some text ================================================
 function addText(text) {
-    document.createElement('li');
-    newLi.innerText = text;
+    const li = document.createElement('li');
+    li.innerText = text;
+    return li;
 }
-const newLi = document.querySelector('li:last-child');
 
-addText('Whodunit?');
+const newLi = addText('Whodunit?');
 passDOM(newLi);
 
 // strings, strings everywhere =================================================
 function newHeader(size, text) {
     // const addNewHeader = document.querySelector('h1');
     const addNewHeader = document.createElement(`h${size}`);
-        addNewHeader.innerText = text;
+    addNewHeader.innerText = text;
+    return addNewHeader;
     
 }
 const callFunction = newHeader(2, 'NEW HEADER');
